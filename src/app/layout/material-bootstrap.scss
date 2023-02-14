@@ -1,0 +1,39 @@
+:host ::ng-deep .mat-table.table, ::ng-deep .mat-table.table {
+  width: 100%;
+  color: #212529 !important;
+  margin-bottom: 0.5rem;
+
+  tr.mat-row, tr.mat-header-row {
+    height: auto;
+  }
+
+  .mat-cell, .mat-footer-cell {
+    font-size: 1rem;
+  }
+
+  th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
+    padding: .5rem .5rem;
+    border-bottom-width: 1px;
+  }
+  th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
+    padding-left: .5rem;
+  }
+  th.mat-header-cell {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #212529;
+  }
+}
+
+
+:host ::ng-deep .mat-paginator, ::ng-deep .mat-paginator {
+  color: #212529;
+}
+
+:host ::ng-deep .mat-datepicker-toggle, ::ng-deep .mat-datepicker-toggle {
+  .mat-icon-button {
+    width: auto;
+    height: auto;
+    line-height: 1.5;
+  }
+}

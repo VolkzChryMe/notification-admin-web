@@ -1,0 +1,20 @@
+<ap-badge type="success">Hallo wawan</ap-badge>
+<div class="card my-3">
+  <div class="card-body">
+    <form>
+      <div class="rounded-3">
+        <div class="input-group d-flex flex-row justify-content-start">
+          <div class="col-auto">
+            <select class="form-control form-select bg-light" id="basic-addon5">
+              <option *ngFor="let value of value">
+                {{ value }}
+              </option>
+            </select>
+          </div>
+          <input class="form-control col rounded-end" type="search" placeholder="Cari nama reference" formControlName="referenceName"/>
+        </div>
+        <button hidden class="btn btn-warning" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
