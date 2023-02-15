@@ -1,0 +1,62 @@
+<ap-table
+  *ngIf="dataSource['showTableSubject'] | async"
+  [dataSource]="dataSource"
+  [pagination]="pagination"
+  (matSortChange)="onSortChange($event)"
+  (changePagination)="onPagination($event)"
+  [displayedColumns]="displayedColumns"
+  matSort
+  matSortDisableClear
+>
+  <ng-container matColumnDef="createdAt">
+    <th mat-header-cell *matHeaderCellDef id="createdAt">Tanggal Kirim</th>
+    <td
+      [hidden]="dataSource.loading$ | async"
+      mat-cell
+      appEllipsifyMe
+      *matCellDef="let element"
+    >
+      {{ element.createdAt}}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef id="email">
+      No. HP
+    </th>
+    <td
+      [hidden]="dataSource.loading$ | async"
+      mat-cell
+      appEllipsifyMe
+      *matCellDef="let element"
+    >
+      <div *ngIf=!element.email>-</div>
+      {{ element.email }}
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef id="status">Status</th>
+    <td
+      [hidden]="dataSource.loading$ | async"
+      mat-cell
+      appEllipsifyMe
+      *matCellDef="let element"
+    >
+      {{ element.status }}
+    </td>
+  </ng-container>
+
+  <!--  <ng-container matColumnDef="product">-->
+  <!--    <th mat-header-cell *matHeaderCellDef id="product">Produk</th>-->
+  <!--    <td-->
+  <!--      [hidden]="dataSource.loading$ | async"-->
+  <!--      mat-cell-->
+  <!--      appEllipsifyMe-->
+  <!--      *matCellDef="let element"-->
+  <!--    >-->
+  <!--      {{ element.product }}-->
+  <!--    </td>-->
+  <!--  </ng-container>-->
+
+</ap-table>

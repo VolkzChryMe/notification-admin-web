@@ -7,17 +7,17 @@
             <select class="form-control form-select bg-light" id="basic-addon5"
                     (change)="onChange($event.target.value)">
               <option *ngFor="let value of value" [value]="value.value">
-                {{ value.value }}
+                {{ value.selectLabel }}
               </option>
             </select>
           </div>
-          <input *ngIf="tempSelect === 'sms'" class="form-control col rounded-end" type="search" placeholder="SMS" formControlName="sms"/>
-          <input *ngIf="tempSelect === 'email'" class="form-control col" type="search" placeholder="EMAIL" formControlName="email"/>
-          <input *ngIf="tempSelect === 'notification'" class="form-control col" type="search" placeholder="NOTIFICATION" formControlName="notification"/>
+          <input *ngIf="tempSelect === 'sms'" class="form-control col rounded-end" type="search" placeholder="Cari nomor HP" formControlName="sms"/>
+          <input *ngIf="tempSelect === 'email'" class="form-control col" type="search" placeholder="Cari email" formControlName="email"/>
+          <input *ngIf="tempSelect === 'notification'" class="form-control col" type="search" placeholder="Cari notification ID" formControlName="notification"/>
         </div>
       </div>
       <div class="col-3 my-3 d-flex">
-        <button class="btn btn-primary">Terapkan</button>
+        <button class="btn btn-primary" (click)="onFilter()">Terapkan</button>
         <button class="btn text-primary mx-3" (click)="onResetFilter()">Hapus Filter</button>
       </div>
     </form>

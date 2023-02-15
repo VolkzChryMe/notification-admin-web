@@ -6,6 +6,7 @@ import { OtpComponent } from './otp.component';
 import {OtpFilterComponent} from "./otp-filter/otp-filter.component";
 import {ApBadgeModule, ApSelectModule} from "astrapay-starter";
 import {OtpTableModule} from "./otp-table/otp-table.module";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {OtpTableModule} from "./otp-table/otp-table.module";
     OtpRoutingModule,
     ApSelectModule,
     ApBadgeModule,
-    OtpTableModule
+    OtpTableModule,
+    ReactiveFormsModule,
   ]
 })
 export class OtpModule { }

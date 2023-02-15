@@ -8,8 +8,8 @@
   matSort
   matSortDisableClear
 >
-  <ng-container matColumnDef="transactionNumber">
-    <th mat-header-cell *matHeaderCellDef id="transactionNumber">Tanggal Kirim</th>
+  <ng-container matColumnDef="createdAt">
+    <th mat-header-cell *matHeaderCellDef id="createdAt">Tanggal Kirim</th>
     <td
       [hidden]="dataSource.loading$ | async"
       mat-cell
@@ -20,8 +20,8 @@
     </td>
   </ng-container>
 
-  <ng-container matColumnDef="createdAt">
-    <th mat-sort-header scope="col" mat-header-cell *matHeaderCellDef id="createdAt">
+  <ng-container matColumnDef="message">
+    <th mat-sort-header scope="col" mat-header-cell *matHeaderCellDef id="message">
       Pesan
     </th>
     <td
@@ -34,8 +34,8 @@
     </td>
   </ng-container>
 
-  <ng-container matColumnDef="vaSource">
-    <th mat-header-cell *matHeaderCellDef id="vaSource">
+  <ng-container matColumnDef="phoneNumber">
+    <th mat-header-cell *matHeaderCellDef id="phoneNumber">
       No. HP
     </th>
     <td
@@ -49,8 +49,8 @@
     </td>
   </ng-container>
 
-  <ng-container matColumnDef="type">
-    <th mat-header-cell *matHeaderCellDef id="type">Status</th>
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef id="status">Status</th>
     <td
       [hidden]="dataSource.loading$ | async"
       mat-cell
@@ -61,16 +61,16 @@
     </td>
   </ng-container>
 
-  <ng-container matColumnDef="product">
-    <th mat-header-cell *matHeaderCellDef id="product">Produk</th>
-    <td
-      [hidden]="dataSource.loading$ | async"
-      mat-cell
-      appEllipsifyMe
-      *matCellDef="let element"
-    >
-      {{ element.product }}
-    </td>
-  </ng-container>
+<!--  <ng-container matColumnDef="product">-->
+<!--    <th mat-header-cell *matHeaderCellDef id="product">Produk</th>-->
+<!--    <td-->
+<!--      [hidden]="dataSource.loading$ | async"-->
+<!--      mat-cell-->
+<!--      appEllipsifyMe-->
+<!--      *matCellDef="let element"-->
+<!--    >-->
+<!--      {{ element.product }}-->
+<!--    </td>-->
+<!--  </ng-container>-->
 
 </ap-table>

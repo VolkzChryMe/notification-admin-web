@@ -1,0 +1,11 @@
+<ng-container>
+  <div>
+    <h3>Log Notification</h3>
+  </div>
+</ng-container>
+<div class="mb-4">
+  <log-notification-filter [logNotification]="logNotification" (filter)="onFilter($event)"></log-notification-filter>
+</div>
+<div class="mt-4">
+  <log-notification-sms-table [logNotification]="logNotification"></log-notification-sms-table>
+</div>

@@ -16,8 +16,8 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'otp',
-    loadChildren: () => import('./otp/otp.module').then((m)=>m.OtpModule)
+    path: 'log-notification',
+    loadChildren: () => import('./log-notification/log-notification.module').then((m)=>m.LogNotificationModule)
   }
 ];
 
